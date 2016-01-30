@@ -1,0 +1,5 @@
+user:
+  build: user
+  volumes:
+    - "./user:/myapp"
+  command: "go run say_hello.go"
