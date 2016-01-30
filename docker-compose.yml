@@ -20,14 +20,3 @@ user-service:
   volumes:
     - "./user-service:/myapp"
   command: "go run user_register.go"
-
-# age-finder:
-#   build: age-finder
-#   env_file: age-finder/.env
-#   ports:
-#     - "8000:8080"
-#   links:
-#     - "user-service"
-#   volumes:
-#     - "./age-finder:/myapp"
-#   command: "go run age-finder.go"
