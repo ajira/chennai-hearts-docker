@@ -9,4 +9,5 @@ RUN ./build.sh
 
 COPY . /myapp
 RUN go build .
+EXPOSE 8080
 CMD go run user_register.go

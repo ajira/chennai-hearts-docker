@@ -3,19 +3,31 @@ redis:
 
 user:
   build: user
+  env_file: user/.env
   ports:
     - "8080:8080"
   volumes:
     - "./user:/myapp"
   command: "go run say_hello.go"
 
-user-redis:
-  build: user-redis
-  env_file: user-redis/.env
+user-service:
+  build: user-service
+  env_file: user-service/.env
   ports:
-    - "8080:8080"
+    - "8000:8080"
   links:
     - "redis"
   volumes:
-    - "./user-redis:/myapp"
+    - "./user-service:/myapp"
   command: "go run user_register.go"
+
+# age-finder:
+#   build: age-finder
+#   env_file: age-finder/.env
+#   ports:
+#     - "8000:8080"
+#   links:
+#     - "user-service"
+#   volumes:
+#     - "./age-finder:/myapp"
+#   command: "go run age-finder.go"

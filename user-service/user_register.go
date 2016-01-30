@@ -9,6 +9,10 @@ import (
 	"github.com/mediocregopher/radix.v2/redis"
 )
 
+const (
+	HTTP_BIND = ":8080"
+)
+
 type User struct {
 	Name string `json:"name"`
 	Age int `json:"age"`
@@ -16,7 +20,6 @@ type User struct {
 
 func main() {
 	http.HandleFunc("/sign_up", func(w http.ResponseWriter, r *http.Request) {
-
 		if r.Method == "POST" {
 			err := saveUser(w, r)
 			if err != nil {
@@ -30,8 +33,8 @@ func main() {
 		}
 	})
 
-	fmt.Println("Listening to :", os.Getenv("HTTP_PORT"))
-	err := http.ListenAndServe(":" + os.Getenv("HTTP_PORT"), handlers.LoggingHandler(os.Stdout, http.DefaultServeMux))
+	fmt.Println("Binding to ", HTTP_BIND)
+	err := http.ListenAndServe(HTTP_BIND, handlers.LoggingHandler(os.Stdout, http.DefaultServeMux))
 	if err != nil {
 		fmt.Println("Error starting server.", err)
 	}
@@ -48,10 +51,9 @@ func saveUser(w http.ResponseWriter, r *http.Request) error {
 		return err
 	}
 
-	redisURL := os.Getenv("REDIS_URL")
-	client, err := redis.Dial("tcp", redisURL)
+	client, err := redis.Dial("tcp", os.Getenv("REDIS_URL"))
 	if err != nil {
-		fmt.Println("error connecting to redis." + redisURL + ". " + err.Error())
+		fmt.Println("error connecting to redis." + os.Getenv("REDIS_URL") + ". " + err.Error())
 		return err
 	}
 
