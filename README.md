@@ -1,7 +1,5 @@
 # Chennai Hearts Docker Workshop
 
-Clone this repository and await further instructions.
-
 ## Thanks for attending the workshop!
 
 * Simply have Docker installed
