@@ -18,7 +18,9 @@
 
 ## Links
 
-* [Presentation 1 - Introduction](bit.ly/1KyMJsL)
-* [Presentation 2 - Checkpoint](bit.ly/1Q3pV6R)
-* [Presentation 3 - Conclusion and Comparison](bit.ly/1K6qNoQ)
+* [Presentation 1 - Introduction](http://bit.ly/1KyMJsL)
+* [Presentation 2 - Checkpoint](http://bit.ly/1Q3pV6R)
+* [Presentation 3 - Conclusion and Comparison](http://bit.ly/1K6qNoQ)
+* [A longer history of Infrastructure Automation](https://medium.com/@rdsubhas/demystifying-devops-part-1-3745bf1da72e#.857j51bmw)
+* [Docker for Development - Common Problems and Solutions](https://medium.com/@rdsubhas/docker-for-development-common-problems-and-solutions-95b25cae41eb#.wsocgp2c5)
 * [Awesome Docker Resources](https://github.com/veggiemonk/awesome-docker)
