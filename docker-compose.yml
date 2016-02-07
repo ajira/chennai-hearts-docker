@@ -1,0 +1,20 @@
+simple:
+  build: simple/
+  env_file: simple/.env
+  ports:
+    - "8080:8080"
+  volumes:
+    - "./simple:/myapp"
+
+complex:
+  build: complex/
+  env_file: complex/.env
+  ports:
+    - "8081:8080"
+  volumes:
+    - "./complex:/myapp"
+  links:
+    - "redis-server"
+
+redis-server:
+  image: redis:3-alpine
