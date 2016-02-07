@@ -18,7 +18,7 @@
 
 ## Links
 
-* Presentation 1 - [Introduction](bit.ly/1KyMJsL)
-* Presentation 2 - [Checkpoint](bit.ly/1Q3pV6R)
-* Presentation 3 - [Conclusion and Comparison](bit.ly/1K6qNoQ)
-
+* [Presentation 1 - Introduction](bit.ly/1KyMJsL)
+* [Presentation 2 - Checkpoint](bit.ly/1Q3pV6R)
+* [Presentation 3 - Conclusion and Comparison](bit.ly/1K6qNoQ)
+* [Awesome Docker Resources](https://github.com/veggiemonk/awesome-docker)
